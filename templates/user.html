@@ -6,6 +6,11 @@
         <h1>Hello, {{ name }}!</h1>
         <button id="changeBgc">Change</button>
         <p><a href="{{ url_for('user', name="Hugo", page=2, version=1) }}">click ici</a></p>
+        <p>
+            <a href="{{ url_for('user', name='500') }}">Retour</a>
+        </p>
+
     </div>
+
 {% endblock %}
 

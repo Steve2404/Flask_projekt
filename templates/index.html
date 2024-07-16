@@ -1,0 +1,20 @@
+{% extends '/base.html' %}
+{% block title %}index{% endblock %}
+
+{% block content_page %}
+    <div class="page_header">
+        <h1>Bienvenue sur mon site</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem error et in tenetur. Aspernatur
+            enim error eum laboriosam quis.</p>
+        <hr>
+
+        <h2>Gestion de Heure:</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores aspernatur, atque blanditiis
+            consequatur incidunt, iste itaque non rem repellat soluta sunt temporibus, ut? Eligendi illo laboriosam
+            molestiae praesentium quis.</p>
+        <hr>
+        <p>The local date and time is {{ moment(current_time).format('LLLL') }}.</p>
+        <p>That was {{ moment(current_time).fromNow(refresh=True) }}</p>
+    </div>
+
+{% endblock %}

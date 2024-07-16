@@ -1,13 +1,17 @@
+from datetime import timezone
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
+from flask_moment import Moment
+from datetime import datetime
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
+Moment(app)
 
 
 @app.route('/')
 def hello_world():  # put application's code here
-    return 'Hello World!'
+    return render_template('index.html', current_time=datetime.now(timezone.utc))
 
 
 @app.route('/user/<name>')
